@@ -1,0 +1,65 @@
+{
+  "name": "2020-trabajo-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint **/*.css",
+    "lint": "npm run lint:js && npm run lint:css",
+    "dev": "netlify dev",
+    "pretest": "npm run lint",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucudal-wp/2020-trabajo-final.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "netlify-cli": "^2.59.3",
+    "url": "https://github.com/ucudal-wp/2020-trabajo-final/issues"
+  },
+  "homepage": "https://github.com/ucudal-wp/2020-trabajo-final#readme",
+  "devDependencies": {
+    "@ucudal/eslint-config": "^0.2.0",
+    "@ucudal/stylelint-config": "^0.1.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "netlify-cli": "^2.59.3",
+    "husky": "^4.2.5",
+    "jest": "^26.2.2",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@middy/core": "^1.4.0",
+    "bcrypt": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "server": "^1.0.30"
+  }
+}

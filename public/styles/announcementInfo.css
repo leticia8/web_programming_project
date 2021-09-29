@@ -1,0 +1,10 @@
+.date {
+  font-size: 1.1em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  display: inline !important;
+}
+
+li.announcement {
+  list-style: none;
+}

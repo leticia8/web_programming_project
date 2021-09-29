@@ -1,0 +1,321 @@
+:root {
+  --default-primary-color: #4caf50;
+  --dark-primary-color: #388e3c;
+  --light-primary-color: #c8e6c9;
+  --text-primary-color: #fff;
+  --accent-color: #ff4081;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --divider-color: #bdbdbd;
+  --font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  --serif-font-family: 'Playfair Display', serif;
+}
+
+body {
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+p.error {
+  margin: 8px;
+  color: var(--accent-color);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+input[type='submit'],
+a,
+button {
+  color: var(--text-primary-color);
+  background: var(--dark-primary-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.8em 2em;
+  margin: 8px;
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+
+button.secondary {
+  color: var(--dark-primary-color);
+  background: var(--text-primary-color);
+  border: 1px solid var(--dark-primary-color);
+}
+
+button.secondary:hover {
+  background: var(--light-primary-color);
+}
+
+button.disabled {
+  color: var(--text-primary-color);
+  animation: pendingButtonColor 2s linear infinite;
+}
+
+button.disabled:hover {
+  background: var(--divider-color);
+}
+
+@keyframes pendingButtonColor {
+  0% {
+    background-color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
+  }
+
+  50% {
+    background-color: var(--light-primary-color);
+    border: 1px solid var(--light-primary-color);
+  }
+
+  100% {
+    background-color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+nav a {
+  color: var(--dark-primary-color);
+  font-family: 'Lily Script One', cursive;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 8px;
+  text-decoration: none;
+  background: none;
+  padding: 0;
+}
+
+form input[type='submit'],
+form button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+form input:hover[type='submit'],
+a:hover,
+button:hover {
+  background: var(--default-primary-color);
+}
+
+nav a:hover {
+  background: none;
+}
+
+form input[type='submit']:active,
+button:active {
+  background: var(--dark-primary-color);
+}
+
+::selection {
+  background-color: var(--dark-primary-color);
+  color: var(--text-primary-color);
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+label {
+  color: var(--secondary-text-color);
+  font-family: var(--font-family);
+  flex-direction: column;
+  font-size: 0.8em;
+  display: flex;
+}
+
+input[type='radio'] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[type='radio'] + label {
+  font-weight: lighter;
+}
+
+div.row > label {
+  flex: 1;
+}
+
+input[type='radio']:checked + label {
+  font-weight: bold;
+  color: var(--default-primary-color);
+}
+
+input,
+textarea,
+select {
+  padding: 6px 10px;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: border-color 0.5s linear;
+}
+
+select.errorInput {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+input.errorInput,
+textarea.errorInput {
+  border: 2px solid var(--accent-color) !important;
+}
+
+input:hover,
+input:focus {
+  border-color: var(--default-primary-color);
+  outline-width: 0;
+}
+
+textarea,
+select,
+input:not([type='radio']):not([type='submit']) {
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+textarea,
+input:not([type='radio']):not([type='submit']) {
+  border-radius: 4px;
+  appearance: none;
+  border: 1px solid var(--divider-color);
+  height: 38px;
+}
+
+textarea {
+  width: 90%;
+  height: 150px;
+  resize: none;
+}
+
+h1 {
+  color: var(--dark-primary-color);
+  font-family: 'Lily Script One', cursive;
+  font-weight: normal;
+  font-size: 3em;
+  margin: 8px;
+}
+
+div.login {
+  margin-top: 10vh;
+}
+
+img.logo {
+  width: 113px;
+  height: 135px;
+}
+
+.login > div,
+.login > div > form {
+  width: 100%;
+}
+
+.centered {
+  width: 30vw;
+  margin: 0 auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  margin: 0 auto;
+  padding: 8px 16px;
+}
+
+@media only screen and (max-width: 900px) {
+  .centered {
+    width: 70vw;
+  }
+}
+
+section {
+  margin: 0 auto;
+  width: 80%;
+}
+
+section.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.main > section {
+  width: 40%;
+  margin: 0;
+}
+
+section.greeting {
+  width: 100vw;
+  background: var(--dark-primary-color);
+  color: var(--text-primary-color);
+  font-family: var(--serif-font-family);
+}
+
+section.greeting > p {
+  margin: 0;
+  padding: 8px 16px;
+}
+section.greeting ::selection {
+  color: var(--dark-primary-color);
+  background-color: var(--text-primary-color);
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    width: 70vw;
+  }
+  section {
+    width: 80vw;
+  }
+}
+
+nav {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid var(--default-primary-color); /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer#about-us {
+  padding-top: 25px;
+  font: var(--font-family);
+  font-style: italic;
+  text-align: center;
+  margin-left: 125px;
+  margin-right: 125px;
+}
+div#developed {
+  font-size: 12px;
+  margin-right: 0;
+}

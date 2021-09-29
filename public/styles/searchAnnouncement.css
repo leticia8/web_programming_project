@@ -1,0 +1,83 @@
+.search {
+  opacity: 0.8;
+}
+div.search-bar {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  display: flex;
+  min-width: 650px;
+  border-radius: 4px;
+}
+
+label#search-labanddate {
+  font-size: 1em !important;
+  color: var(--text-primary-color);
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 160px;
+  max-width: 160px;
+}
+
+input#search-org {
+  background: var(--text-primary-color);
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 180px;
+  height: 58px;
+}
+
+select#search-select {
+  background: var(--text-primary-color);
+  color: #555;
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 150px;
+  max-width: 250px;
+  border-radius: 4px;
+  height: 58px;
+}
+input#date {
+  min-width: 170px;
+  max-width: 170px;
+  flex: 1;
+}
+
+input.submit-search {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+div#search-date {
+  background: var(--text-primary-color);
+  color: #555;
+  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 150px;
+  max-width: 150px;
+}
+legend.search {
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+  font-family: var(--font-family);
+}
+
+form.search-announcement {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 940px) {
+  form.search-announcement {
+    width: 100vw;
+  }
+}
